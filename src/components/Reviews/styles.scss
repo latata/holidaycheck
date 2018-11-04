@@ -1,0 +1,11 @@
+.reviews {
+	background-color: #f5f5f5;
+	margin-top: 350px;
+
+	&__container {
+		margin: 0 auto;
+		position: relative;
+		width: 625px;
+		top: -100px;
+	}
+}

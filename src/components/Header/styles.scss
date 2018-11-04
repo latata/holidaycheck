@@ -1,0 +1,42 @@
+@import '../../variables';
+
+.header {
+	align-items: center;
+	background: #fff;
+	box-shadow: $default-box-shadow;
+	display: flex;
+	height: 110px;
+	justify-content: space-between;
+	padding-left: 30px;
+
+	&__logo {
+		width: 130px;
+	}
+}
+
+.navigation {
+	align-self: stretch;
+
+	> ul {
+		display: flex;
+		font-size: 14px;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		height: 100%;
+	}
+
+	&__item a {
+		align-items: center;
+		display: flex;
+		height: 100%;
+		padding: 0 30px;
+		text-decoration: none;
+
+		// apply active state only if navigation list is not in hover state
+		&:hover, .navigation > ul:not(:hover) &.is-active {
+			background-color: #f5f5f5;
+			color: #696969;
+		}
+	}
+}

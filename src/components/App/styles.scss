@@ -1,0 +1,19 @@
+.app {
+  background: url('background.jpg') no-repeat 0 -180px;
+  background-size: 100%;
+  padding-top: 30px;
+
+  &__container {
+    margin: 0 auto;
+    width: 950px;
+  }
+
+  footer {
+    align-items: center;
+    display: flex;
+    font-size: 14px;
+    justify-content: center;
+    height: 140px;
+
+  }
+}
