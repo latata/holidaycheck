@@ -9,9 +9,11 @@
 	margin-bottom: 100px;
 	padding: 0 50px 30px;
 	position: relative;
-	// todo remove min-height
-	min-height: 200px;
 	text-align: center;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
 
 	&__avatar {
 		border: 2px solid #fff;

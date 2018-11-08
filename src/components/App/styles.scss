@@ -1,10 +1,18 @@
 .app {
-  background: url('background.jpg') no-repeat 0 -180px;
-  background-size: 100%;
   padding-top: 30px;
+
+  &__background {
+    background: url('background.jpg') no-repeat 0 -180px;
+    background-size: cover;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
 
   &__container {
     margin: 0 auto;
+    position: relative;
     width: 950px;
   }
 
