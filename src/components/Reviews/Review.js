@@ -2,19 +2,19 @@ import React from 'react';
 import { observer, inject } from 'mobx-react';
 
 import './Review.scss';
-import Comment from './Comment';
-import CommentForm from './CommentForm';
+import Comment from '../Comment/Comment';
+import CommentForm from '../Comment/CommentForm';
 import ReviewThumb from './ReviewThumb';
 import ReviewRating from './ReviewRating';
 import ExpandableText from '../ExpandableText';
 
 class Review extends React.Component {
+	state = {
+		addComment: false,
+	};
+
 	constructor(props) {
 		super(props);
-
-		this.state = {
-			addComment: false,
-		};
 
 		this.addComment = this.addComment.bind(this);
 		this.saveComment = this.saveComment.bind(this);

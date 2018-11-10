@@ -56,9 +56,10 @@
 	}
 
 	&-btn {
-		padding: 10px 20px;
 		border: 0;
+		color: #fff;
 		cursor: pointer;
+		padding: 10px 20px;
 		text-transform: uppercase;
 		font-weight: 900;
 
@@ -69,13 +70,11 @@
 	}
 
 	&-cancel {
-		color: #fff;
 		background-color: #e8402d;
 		margin-right: 6px;
 	}
 
 	&-save {
-		color: #fff;
 		background-color: #54b13f;
 	}
 

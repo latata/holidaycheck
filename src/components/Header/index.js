@@ -1,6 +1,7 @@
 import React from 'react';
-import logo from './hc-logo.svg';
 import Navigation from './Navigation';
+
+import logo from './hc-logo.svg';
 
 import './styles.scss';
 

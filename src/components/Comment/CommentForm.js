@@ -2,12 +2,12 @@ import React from 'react';
 import Comment from '../../models/Comment';
 
 class CommentForm extends React.Component {
+	state = {
+		text: '',
+	};
+
 	constructor(props) {
 		super(props);
-
-		this.state = {
-			text: '',
-		};
 
 		this.textRef = React.createRef();
 		this.onChange = this.onChange.bind(this);

@@ -3,13 +3,13 @@ import React from 'react';
 import './styles.scss';
 
 class ExpandableText extends React.Component {
+	state = {
+		isTextExpandable: false,
+		isTextExpanded: false,
+	};
+
 	constructor(props) {
 		super(props);
-
-		this.state = {
-			isTextExpandable: false,
-			isTextExpanded: false,
-		};
 
 		this.expandText = this.expandText.bind(this);
 
