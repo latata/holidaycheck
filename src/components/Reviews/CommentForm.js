@@ -12,6 +12,7 @@ class CommentForm extends React.Component {
 		this.textRef = React.createRef();
 		this.onChange = this.onChange.bind(this);
 		this.save = this.save.bind(this);
+		this.cancel = this.cancel.bind(this);
 	}
 
 	componentDidMount() {
@@ -22,6 +23,10 @@ class CommentForm extends React.Component {
 		this.setState({
 			text: value,
 		});
+	}
+
+	cancel() {
+		this.props.onCancel();
 	}
 
 	save() {
@@ -39,7 +44,10 @@ class CommentForm extends React.Component {
 		return (
 			<div className="review__comment-form">
 				<textarea className="review__comment-textarea" value={text} onChange={this.onChange} ref={this.textRef} />
-				<button className="review__comment-save" disabled={!text} onClick={this.save}>Save</button>
+				<div className="review__comment-form-buttons">
+					<button className="review__comment-cancel review__comment-btn" onClick={this.cancel}>Cancel</button>
+					<button className="review__comment-save review__comment-btn" disabled={!text} onClick={this.save}>Save</button>
+				</div>
 			</div>
 		);
 	}

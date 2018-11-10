@@ -1,16 +1,9 @@
 .expandable-text {
-	$review-text-height: 100px;
-	$comment-text-height: 60px;
-
-	max-height: $review-text-height;
+	max-height: 100px;
 	overflow: hidden;
 	position: relative;
 	text-align: left;
 	white-space: pre-line;
-
-	&.is-comment {
-		max-height: $comment-text-height;
-	}
 
 	&.is-expandable {
 		cursor: pointer;
@@ -21,10 +14,6 @@
 			height: 100%;
 			position: absolute;
 			width: 100%;
-		}
-
-		&.is-comment::before {
-			background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, #edf0f2 95%);
 		}
 	}
 

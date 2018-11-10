@@ -18,6 +18,7 @@ class Review extends React.Component {
 
 		this.addComment = this.addComment.bind(this);
 		this.saveComment = this.saveComment.bind(this);
+		this.cancelComment = this.cancelComment.bind(this);
 	}
 
 
@@ -32,6 +33,12 @@ class Review extends React.Component {
 			addComment: false,
 		});
 		this.props.review.saveComment(comment);
+	}
+
+	cancelComment() {
+		this.setState({
+			addComment: false,
+		});
 	}
 
 	renderComment() {
@@ -51,7 +58,7 @@ class Review extends React.Component {
 		if (addComment) {
 			return (
 				<Comment user={currentUser}>
-					<CommentForm onSave={this.saveComment} currentUser={currentUser} />
+					<CommentForm onSave={this.saveComment} onCancel={this.cancelComment} currentUser={currentUser} />
 				</Comment>
 			);
 		}
