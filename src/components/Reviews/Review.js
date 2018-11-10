@@ -14,7 +14,6 @@ class Review extends React.Component {
 
 		this.state = {
 			addComment: false,
-			commentJustCreated: false,
 		};
 
 		this.addComment = this.addComment.bind(this);
@@ -31,22 +30,20 @@ class Review extends React.Component {
 	saveComment(comment) {
 		this.setState({
 			addComment: false,
-			commentJustCreated: true,
 		});
 		this.props.review.saveComment(comment);
 	}
 
 	renderComment() {
 		const { review, currentUser } = this.props;
-		const { commentJustCreated, addComment } = this.state;
+		const { addComment } = this.state;
 
 		if (review.comment) {
 			return (
 				<Comment user={review.comment.user}>
 					<ExpandableText
 						text={review.comment.body}
-						isComment={true}
-						isTextExpanded={commentJustCreated} />
+						isComment={true} />
 				</Comment>
 			);
 		}
