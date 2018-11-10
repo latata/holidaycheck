@@ -35,10 +35,12 @@ class ExpandableText extends React.Component {
 		const { text, isComment } = this.props;
 		const { isTextExpandable, isTextExpanded } = this.state;
 		const classNames = ['expandable-text'];
+		let onClick;
 
 		if (isTextExpanded) {
 			classNames.push('is-expanded');
 		} else if (isTextExpandable) {
+			onClick = this.expandText;
 			classNames.push('is-expandable');
 		}
 
@@ -47,7 +49,7 @@ class ExpandableText extends React.Component {
 		}
 
 		return (
-			<div className={classNames.join(' ')} ref={this.reviewTextRef} onClick={this.expandText}>
+			<div className={classNames.join(' ')} ref={this.reviewTextRef} onClick={onClick}>
 					<span ref={this.reviewTextSpanRef}>
 						{text}
 					</span>

@@ -56,13 +56,19 @@
 	}
 
 	&-save {
+		$comment-save-button-background: #fad73b;
 		padding: 10px 20px;
 		border: 0;
-		background-color: #fad73b;
+		background-color: $comment-save-button-background;
 		color: #2a6c95;
 		cursor: pointer;
 		text-transform: uppercase;
 		font-weight: 900;
+
+		&[disabled] {
+			cursor: default;
+			background-color: rgba($comment-save-button-background, .7);
+		}
 	}
 
 	&-form {
