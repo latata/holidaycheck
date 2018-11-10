@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../App/hc-logo.svg';
+import logo from './hc-logo.svg';
 import Navigation from './Navigation';
 
 import './styles.scss';
