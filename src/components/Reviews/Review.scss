@@ -39,6 +39,12 @@
 		font-size: 12px;
 	}
 
+	&__title {
+		color: #7f7f7f;
+		font-size: 26px;
+		font-weight: normal;
+	}
+
 	&__rating {
 		width: 305px;
 		height: 50px;
@@ -60,7 +66,7 @@
 	}
 
 	&__stars {
-		$review-stars-border: 1px solid #f2f2f2;
+		$review-stars-border: 2px solid #f2f2f2;
 		align-items: center;
 		border-bottom: $review-stars-border;
 		border-right: $review-stars-border;
@@ -71,7 +77,7 @@
 		justify-content: center;
 
 		i {
-			margin-right: 6px;
+			margin-right: 8px;
 			color: #dfe2e6;
 
 			&.is-active {
@@ -80,7 +86,7 @@
 		}
 
 		&-rating {
-			margin-left: 6px;
+			margin-left: 12px;
 			color: #585858;
 			font-size: 14px;
 			font-weight: bold;

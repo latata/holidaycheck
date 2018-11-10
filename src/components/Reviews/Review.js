@@ -80,7 +80,7 @@ class Review extends React.Component {
 					<div className="review__full-name">{review.user.name}</div>
 					<div className="review__date">{review.formattedCreationDate}</div>
 				</div>
-				<h2>{review.title}</h2>
+				<h2 className="review__title">{review.title}</h2>
 				<div className="review__rating">
 					<ReviewThumb thumbUp={review.thumbUp} />
 					<ReviewRating rating={review.rating} />
