@@ -12,7 +12,7 @@ class App extends Component {
 		  <div className="app__background" />
           <div className="app__container">
 			  <Header />
-			  <Reviews/>
+			  <Reviews />
 			  <footer>
 				  &copy; 1999 - 2018 HolidayCheck AG
 			  </footer>

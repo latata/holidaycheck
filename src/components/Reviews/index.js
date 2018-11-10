@@ -1,16 +1,15 @@
 import React from 'react';
+import { inject } from 'mobx-react';
 
 import './styles.scss';
 import Review from './Review';
 
-const Reviews = () => (
+const Reviews = ({ reviews }) => (
 	<section className="reviews">
 		<div className="reviews__container">
-			<Review />
-			<Review />
-			<Review />
+			{reviews.map((review, index) => <Review review={review} key={index} />)}
 		</div>
 	</section>
 );
 
-export default Reviews;
+export default inject(({ store: { reviews } }) => ({ reviews }))(Reviews);
