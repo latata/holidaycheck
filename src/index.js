@@ -22,7 +22,7 @@ const store = ReviewsStore.build({
 
 WebFont.load({
 	google: {
-		families: ['Open+Sans:400,700,800'],
+		families: ['Open+Sans:400,600,700,800'],
 	},
 	active() {
 		// render application after the font is loaded to prevent flash of content
